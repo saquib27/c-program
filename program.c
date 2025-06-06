@@ -1,20 +1,20 @@
-#include<stdio.h>
-void main(){
-float bs,gs,da,hra;
-printf("enter your basic salary\n");
-scanf("%f", &bs);
-
-if (bs<10000)
+#include <stdio.h>
+void main()
 {
-hra=0.1*bs;
-da=0.9*bs;
+    float bs, gs, da, hra;
+    printf("enter your basic salary\n");
+    scanf("%f", &bs);
 
-}
-else
-{
-    hra=500;
-    da=.98*bs;
-}
-gs=bs+da+hra;
-printf("Gross salary=$ %f\n",gs);
+    if (bs < 10000)
+    {
+        hra = 0.1 * bs;
+        da = 0.9 * bs;
+    }
+    else
+    {
+        hra = 500;
+        da = .98 * bs;
+    }
+    gs = bs + da + hra;
+    printf("Gross salary=$ %f\n", gs);
 }

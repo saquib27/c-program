@@ -7,7 +7,8 @@ scanf("%f", &bs);
 if (bs<10000)
 {
 hra=0.1*bs;
-da=0.9*bs;    /* code */
+da=0.9*bs;
+
 }
 else
 {

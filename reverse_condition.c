@@ -14,6 +14,12 @@ int main(){
     scanf("%d",&x);
     printf("to");
     scanf("%d",&y);
+    if(y>total_number_of_element)
+    {
+        printf("invalid index\n");
+    }
+    else
+    {
      for  (int i=x,j=y;i<=j;i++,j--)
      {
         int swap=number[i];
@@ -25,6 +31,7 @@ int main(){
     {
         printf("%d \n",number[i]);
     }
+}
    return 0; 
 }
 

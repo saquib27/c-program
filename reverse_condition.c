@@ -14,7 +14,7 @@ int main(){
     scanf("%d",&x);
     printf("to");
     scanf("%d",&y);
-    if(y>total_number_of_element)
+    if(y,x>total_number_of_element)
     {
         printf("invalid index\n");
     }

@@ -3,7 +3,7 @@ void dhoni();
 void virat();
 void main(){
     char x;
-printf("select d for dhoni or v for virat");
+printf("select d for dhoni or v for virat\n");
 
 scanf("%c",&x);
 

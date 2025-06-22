@@ -10,7 +10,7 @@ void main()
     {
         scanf("%d", &number[i]);
     }
-    for (int i = 1; i <= x; x++)
+    for (int i = 1; i <= x; i++)
     {
         int isFound = 0;
         for (int y = 0; y < x; y++)
@@ -22,7 +22,12 @@ void main()
         }
         if (isFound == 0)
         {
-            printf("%d", i);
+            printf("%d\n", i);
+            break;
+        }
+        else 
+        {
+            printf("not found\n");
             break;
         }
     }

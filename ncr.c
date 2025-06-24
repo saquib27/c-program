@@ -1,5 +1,5 @@
 #include<stdio.h>
-int factorial(int x){
+long double factorial(int x){
 
     long double  factorial=1;
     
@@ -11,19 +11,23 @@ int factorial(int x){
     return factorial;
 }
 int main(){
-    int n;
+    long double n;
     printf("enter n\t");
-    scanf("%d",&n);
-    int r;
+    scanf("%Lf",&n);
+    long double r;
     printf("enter r\t");
-    scanf("%d",&r);
+    scanf("%Lf",&r);
 
-    int nfactorial=factorial(n);
-    int rfactorial=factorial(r);
-    int nrfactorail=factorial(n-r);
+    if (n < r || n < 0 || r < 0) {
+        printf("invalid input \n");
+    }
 
-    int ncr=nfactorial/(rfactorial*nrfactorail);
-    printf("nCr = %d \n",ncr);
+    long double nfactorial=factorial(n);
+    long double rfactorial=factorial(r);
+    long double nrfactorail=factorial(n-r);
+
+    long double ncr=nfactorial/(rfactorial*nrfactorail);
+    printf("nCr = %.0Lf \n",ncr);
 
 }
 

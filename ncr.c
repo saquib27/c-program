@@ -11,12 +11,12 @@ long double factorial(int x){
     return factorial;
 }
 int main(){
-    long double n;
+    int n;
     printf("enter n\t");
-    scanf("%Lf",&n);
-    long double r;
+    scanf("%d",&n);
+    int r;
     printf("enter r\t");
-    scanf("%Lf",&r);
+    scanf("%d",&r);
 
     if (n < r || n < 0 || r < 0) {
         printf("invalid input \n");

@@ -4,6 +4,12 @@ void main()
     int year;
     printf("enter a year\n");
     scanf("%d", &year);
+
+    if(year<=0){
+        printf("enter valid year\n");
+    }
+
+    else{
     if (year % 400 == 0)
     {
         printf("yes\n");
@@ -20,4 +26,5 @@ void main()
     {
         printf("no\n");
     }
+}
 }

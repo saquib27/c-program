@@ -1,13 +1,21 @@
 #include<stdio.h>
 int main(){
-    int array [2][2];
-    array[0][0]=1;
-    array[0][1]=1;
-    array[1][0]=1;
-    array[1][1]=1;
+    int row,colume;
+    printf("enter number of rows: \t");
+    scanf("%d",&row);
+    printf("enter number of colume: \t");
+    scanf("%d",&colume);
+    int array [row][colume];
+    
+    for(int i=0;i<row;i++){
+        for(int j=0;j<colume;j++){
+            printf("enter your number");
+            scanf("%d",&array[i][j]);
+        }
+    }
 
-    for (int i=0;i<2;i++){
-        for(int j=0;j<2;j++){
+    for (int i=0;i<row;i++){
+        for(int j=0;j<colume;j++){
             printf("%d",array[i][j]);
         }
          printf("\n");

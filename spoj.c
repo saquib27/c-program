@@ -1,23 +1,21 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
 
     int x;
 
-
-    do{
-        scanf("%d",&x);
-
-        if(x==42)
+    do
     {
-      break;
-        
-    printf("%d\n",x);
-    }
-   
-}
-    while (1);  
+        scanf("%d", &x);
+
+        if (x == 42)
+        {
+            break;
+
+            printf("%d\n", x);
+        }
+
+    } while (1);
 
     return 0;
-        }
-        
-
+}

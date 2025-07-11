@@ -21,11 +21,7 @@ void main()
 
             {
                 printf("pair %d %d \n", number[i], number[j]);
-                
             }
-            
-            
         }
-    
     }
 }

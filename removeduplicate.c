@@ -28,20 +28,21 @@ int main()
         }
     }
     int unique_array[total_number_of_element];
-    int x=0;
-    unique_array[x]=number[0];
-    for(int i=0;i<total_number_of_element;i++){
-        if(unique_array[x]!=number[i]){
-            x=x+1;
-            unique_array[x]=number[i];
-            
+    int x = 0;
+    unique_array[x] = number[0];
+    for (int i = 0; i < total_number_of_element; i++)
+    {
+        if (unique_array[x] != number[i])
+        {
+            x = x + 1;
+            unique_array[x] = number[i];
         }
     }
     printf("unique sorted array\n");
-    for(int i=0;i<=x;i++){
-        printf("%d\n",unique_array[i]);
+    for (int i = 0; i <= x; i++)
+    {
+        printf("%d\n", unique_array[i]);
     }
 
-    
     return 0;
 }

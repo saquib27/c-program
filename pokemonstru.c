@@ -1,60 +1,33 @@
-#include<stdio.h>
-#include<string.h>
-int main() 
+#include <stdio.h>
+#include <string.h>
+
+struct Pokemon
 {
-    struct pokemon
-    {
-            int hp;
-            int speed;
-            int attack;
-            char tier;
-    } pikachu,charlizad,mewtow;
+    int hp, speed, attack;
+    char tier;
+};
 
-    pikachu.attack=100;
-    pikachu.hp=80;
-    pikachu.speed=88;
-    pikachu.tier='s';
+int main()
+{
+    struct Pokemon pokemons[3] = {
+        {80, 88, 100, 's'},
+        {100, 60, 140, 'l'},
+        {110, 200, 180, 'g'}};
 
-    charlizad.attack=140;
-    charlizad.hp=100;
-    charlizad.speed=60;
-    charlizad.tier='l';
-
-    mewtow.attack=180;
-    mewtow.hp=110;
-    mewtow.speed=200;
-    mewtow.tier='g';
-
-    printf("we have three pokemon details\n");
-    printf("type 1 for pikachu\n");
-    printf("type 2 for charlizard\n");
-    printf("type 3 for mewtow\n");
+    printf("We have three Pokémon details:\n");
+    printf("1. Pikachu\n2. Charizard\n3. Mewtwo\n");
 
     int input;
-    scanf("%d",&input);
+    scanf("%d", &input);
 
-    if(input==1){
-        printf("attack: %d\n",pikachu.attack);
-        printf("hp: %d\n",pikachu.hp);
-        printf("speed: %d\n",pikachu.speed);
-        printf("tier: %c\n",pikachu.tier);
+    if (input >= 1 && input <= 3)
+    {
+        struct Pokemon p = pokemons[input - 1];
+        printf("attack: %d\nhp: %d\nspeed: %d\ntier: %c\n",
+               p.attack, p.hp, p.speed, p.tier);
     }
-    else if(input==2){
-        printf("attack: %d\n",charlizad.attack);
-        printf("hp: %d\n",charlizad.hp);
-        printf("speed: %d\n",charlizad.speed);
-        printf("tier: %c\n",charlizad.tier);
+    else
+    {
+        printf("Enter valid response\n");
     }
-    else if(input==3){
-        printf("attack: %d\n",mewtow.attack);
-        printf("hp: %d\n",mewtow.hp);
-        printf("speed: %d\n",mewtow.speed);
-        printf("tier: %c\n",mewtow.tier);
-    }
-    else{
-        printf("enter valid responce");
-    }
-    
-    
-    
 }

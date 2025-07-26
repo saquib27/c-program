@@ -2,7 +2,8 @@
 
 int main()
 {
-    int operation, firstnumber, secondnumber, result;
+    int operation, firstnumber, secondnumber; 
+    double result;
     do
     {
         printf("1. Addition\n");
@@ -23,28 +24,29 @@ int main()
         {
         case 1:
             result = firstnumber + secondnumber;
-            printf("Result: %d + %d = %d\n", firstnumber, secondnumber, result);
+            printf("Result: %d + %d = %.2lf\n", firstnumber, secondnumber, result);
             break;
         case 2:
             result = firstnumber - secondnumber;
-            printf("Result: %d - %d = %d\n", firstnumber, secondnumber, result);
+            printf("Result: %d - %d = %.2lf\n", firstnumber, secondnumber, result);
             break;
         case 3:
             result = firstnumber * secondnumber;
-            printf("Result: %d * %d = %d\n", firstnumber, secondnumber, result);
+            printf("Result: %d * %d = %.2lf\n", firstnumber, secondnumber, result);
             break;
         case 4:
             if (secondnumber != 0)
-                result = firstnumber / secondnumber;
+                result = (double)firstnumber / secondnumber;
             else
             {
                 printf("Error 'Division by zero is not allowed'\n");
                 break;
             }
-            printf("Result: %d / %d = %d\n", firstnumber, secondnumber, result);
+            printf("Result: %d / %d = %.2lf\n", firstnumber, secondnumber, result);
             break;
         case 5:
             printf("Exit\n");
+            printf("Thank you for using\n");
             break;
         default:
             printf("Invalid operator\n");

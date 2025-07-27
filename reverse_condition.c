@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     int total_number_of_element;
-    printf("enter total number of number\n");
+    printf("enter total number of element\n");
     scanf("%d", &total_number_of_element);
     int number[total_number_of_element];
     printf("enter your numbers \n");

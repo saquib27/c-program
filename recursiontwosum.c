@@ -27,6 +27,10 @@ int main()
 
     printf("enter number of elements: ");
     scanf("%d", &numSize);
+    if(numSize<2){
+        printf("enter valid number of element to be paired\n");
+    }
+    else{
 
     int nums[numSize];
 
@@ -46,5 +50,6 @@ int main()
     {
         printf("no pair found\n");
     }
+}
     return 0;
 }

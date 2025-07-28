@@ -11,15 +11,17 @@ int function(int number[], int starting, int size, int target)
     {
         if (number[starting] + number[i] == target)
         {
-            printf("pair found: %d,%d\n", number[starting], number[i]);
+            printf("pair found: %d,%d\n",number[starting], number[i]);
             found = 1;
         }
     }
     int nextResult = function(number, starting + 1, size, target);
-    if (found || nextResult)
+    if (found || nextResult){
         return 1;
-    else
+    }
+    else{
         return 0;
+    }
 }
 int main()
 {

@@ -16,9 +16,16 @@ int steps(int stair)
 int main()
 {
     int stair;
-    printf("enter no of stair\n");
+    printf("enter no of stair \n");
     scanf("%d", &stair);
-    int ways = steps(stair);
-    printf("no of ways  %d\n", ways);
+    if (stair <= 0)
+    {
+        printf("enter valid number of stairs");
+    }
+    else
+    {
+        int ways = steps(stair);
+        printf("no of ways  %d\n", ways);
+    }
     return 0;
 }

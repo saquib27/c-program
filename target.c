@@ -48,30 +48,74 @@
 
 
 // }
+//#include<stdio.h>
+// int main(){
+//     int numSize;
+ 
+//     scanf("%d", &numSize);
+//     int nums[numSize];
+   
+//     for (int i = 0; i < numSize; i++)
+//     {
+//         scanf("%d", &nums[i]);
+//     }
+//     int target;
+    
+//     scanf("%d", &target);
+//     for (int i = 0; i < numSize; i++)
+//     {
+//         for (int j = i + 1; j < numSize; j++)
+//         {
+//             if (nums[i] + nums[j] == target)
+
+//             {
+//                 printf(" %d %d \n", i, j);
+//             }
+//         }
+//      }
+
+// }
 #include<stdio.h>
 int main(){
-    int numSize;
- 
-    scanf("%d", &numSize);
-    int nums[numSize];
-   
-    for (int i = 0; i < numSize; i++)
+    int numsize;
+    printf("enter size of array\n");
+
+    scanf("%d",&numsize);
+    int num[numsize];
+    printf("enter non decresing array\n");
+    for (int i = 0; i < numsize; i++)
     {
-        scanf("%d", &nums[i]);
+        scanf("%d", &num[i]);
     }
     int target;
-    
-    scanf("%d", &target);
-    for (int i = 0; i < numSize; i++)
-    {
-        for (int j = i + 1; j < numSize; j++)
-        {
-            if (nums[i] + nums[j] == target)
+    printf("target\n");
+    scanf("%d",&target);
+    int i=0;
+    int j=numsize-1;
+    int found = 0;
 
-            {
-                printf(" %d %d \n", i, j);
-            }
+    while (i < j) {
+        int sum = num[i] + num[j];
+
+        if (sum == target) {
+            printf(" %d %d\n", num[i], num[j]);
+            found = 1;
+            int left_val = num[i];
+            int right_val = num[j];
+            while (i < j && num[i] == left_val) i++;
+            while (i < j && num[j] == right_val) j--;
         }
-     }
+        else if (sum > target) {
+            j--;
+        }
+        else {
+            i++;
+        }
+    }
 
+    if (found==0) {
+        printf("No pair found.\n");
+    }
+
+    return 0;
 }

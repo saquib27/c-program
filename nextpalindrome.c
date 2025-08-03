@@ -14,8 +14,8 @@ For each K, output the smallest palindrome larger than K.*/
 
 #include<stdio.h>
   int palindrome(int a){
-    long double input= a;
-    long double check=0;
+    long long int input= a;
+    long long int check=0;
     while (a > 0) {
         check = check * 10 + (a % 10);
         a = a / 10;
@@ -28,15 +28,15 @@ int main() {
 
     while (t--){
 
-        long double number;
-        scanf("%Lf",&number);
+        long long number;
+        scanf("%llu",&number);
         number=number+1;
         while (!palindrome(number)) {
             number=number+1;
       
 
         }
-        printf("%Lf\n",number);
+        printf("%llu\n",number);
     }
     return 0;
 }

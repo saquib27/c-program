@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main()
+int main()
 {
     int total_number;
     printf("enter no of term\n");
@@ -16,7 +16,7 @@ void main()
         int series[total_number];
         series[0] = 0;
         series[1] = 1;
-        printf("fibonacci series:\t %d %d", series[0], series[1]); 
+        printf("fibonacci series:\t %d %d", series[0], series[1]);
 
         for (int i = 2; i < total_number; i++)
         {
@@ -26,4 +26,5 @@ void main()
         
         printf("\n");
     }
+    return 0;
 }

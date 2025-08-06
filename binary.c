@@ -1,9 +1,8 @@
 #include <stdio.h>
 void binary(int x)
 {
-    if (x == 1)
+    if (x == 0)
     {
-        printf("1");
         return;
     }
     binary(x / 2);

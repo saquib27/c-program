@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdbool.h>
 int main()
 {
     int total_number_of_element;
@@ -12,14 +13,17 @@ int main()
     }
 
     for(int i=0;i<=total_number_of_element-1;i++){
+        bool check=false;
         for(int j=0;j<total_number_of_element-1-i;j++){
             if(number[j]>number[j+1]){
                 int temp=number[j];
                 number[j]=number[j+1];
                 number[j+1]=temp;
+                check=false;
             }
 
         }
+        if(check==true) break;
     }
     printf("\n");
     for(int i=0;i<total_number_of_element;i++){

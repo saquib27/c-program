@@ -1,6 +1,6 @@
 #include <stdio.h>
-int steps(int stair)
-{
+int steps(int stair){
+
     if (stair == 1)
     {
         return 1;
@@ -12,8 +12,14 @@ int steps(int stair)
     if(stair==3){
         return 4;
     }
-    int no_of_ways = steps(stair - 1) + steps(stair - 2) + steps(stair-3);
-    return no_of_ways;
+     int a = 1, b = 2, c = 4, result;
+    for (int i = 4; i <= stair; i++) {
+        result = a + b + c;
+        a = b;
+        b = c;
+        c = result;
+    }
+    return c;
 }
 
 int main()

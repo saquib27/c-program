@@ -1,19 +1,41 @@
+// #include <stdio.h>
+// void main()
+// {
+//     int x, i;
+//     printf("enter a number\n");
+//     scanf("%d", &x);
+
+//     long double  factorial=1;
+//     if(x>=0){
+
+//     for (i = 1; i <= x; i++)
+//     {
+//         factorial = factorial * i;
+//     }
+//     printf("factorial of given number %Lf\n", factorial);
+// }
+// else 
+//     printf("invalid number\n");
+// }
 #include <stdio.h>
-void main()
+int main()
 {
-    int x, i;
-    printf("enter a number\n");
+    int t;
+    scanf("%d", &t);
+
+    while (t--){
+    int x;
     scanf("%d", &x);
 
-    long double  factorial=1;
+ long double factorial=1;
     if(x>=0){
 
-    for (i = 1; i <= x; i++)
+    for (int i = 1; i <= x; i++)
     {
         factorial = factorial * i;
     }
-    printf("factorial of given number %Lf\n", factorial);
+    printf("%.0Lf\n", factorial);
 }
-else 
-    printf("invalid number\n");
+}
+return 0;
 }
